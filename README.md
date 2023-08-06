@@ -8,6 +8,8 @@ This project deals with outlier detection using isolation forest. The project ma
 2. R using isotree
 3. Go using i-forest (https://github.com/e-XpertSolutions/go-iforest/tree/master)
 
+**Note** This project was based on the [repo](https://github.com/ThomasWMiller/jump-start-mnist-iforest) prepared by Dr. Thomas Miller. He built the R and Python scripts, while the main part of this assignment was to build a similar script using GoLang and then update the results (e.g., R script) to compare the correlation amongst all the programs. If you are student in the NWMSDS program, click this link [Outlier_Detection](https://canvas.northwestern.edu/courses/191912/pages/outlier-detection-isolation-forests?wrap=1) for more information.
+
 ### Data
 The data used for this project was [MNIST](https://en.wikipedia.org/wiki/MNIST_database), a database famous for its use in machine learning and image recognition. In order to read in the large amount of data to memory, the [GoMNIST](https://github.com/petar/GoMNIST) package was used. 
 
