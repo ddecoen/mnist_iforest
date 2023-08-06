@@ -17,7 +17,7 @@ func main() {
 	rand.Seed(999) // You can use any integer value as the seed
 	startTime := time.Now()
 	// Read in the data and set up variables for images and labels
-	train, _, _ := GoMNIST.Load("./data")
+	train, _, _ := GoMNIST.Load("../data")
 	images := make([][]float64, len(train.Images))
 	labels := make([]int, len(train.Images))
 
