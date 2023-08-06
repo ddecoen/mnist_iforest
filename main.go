@@ -4,6 +4,7 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
+	"math/rand"
 	"os"
 	"time"
 
@@ -12,6 +13,8 @@ import (
 )
 
 func main() {
+	// Set a fixed random seed for reproducibility
+	rand.Seed(999) // You can use any integer value as the seed
 	startTime := time.Now()
 	// Read in the data and set up variables for images and labels
 	train, _, _ := GoMNIST.Load("./data")
@@ -58,10 +61,11 @@ func main() {
 	fmt.Printf("Number of outliers: %d\n", numOutliers)
 
 	// print out the indices of the outliers
-	fmt.Println("Indices of outliers:")
-	for _, idx := range outlierIndices {
-		fmt.Println(idx)
-	}
+	// commented this out as it was taking up too much screen space
+	//fmt.Println("Indices of outliers:")
+	//for _, idx := range outlierIndices {
+	//	fmt.Println(idx)
+	//}
 
 	// write outliers to a json file
 	outlierIndicesData := struct {
