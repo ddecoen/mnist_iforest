@@ -12,7 +12,7 @@ This project deals with outlier detection using isolation forest. The project ma
 The data used for this project was [MNIST](https://en.wikipedia.org/wiki/MNIST_database), a database famous for its use in machine learning and image recognition. In order to read in the large amount of data to memory, the [GoMNIST](https://github.com/petar/GoMNIST) package was used. 
 
 ### Analysis and results
-Go did a good job of reading in all the image data and the overall code using go-iforest was pretty streamlined. The overall time to run the program was coming in around 11 seconds. See overall results from program below:  
+Go did a good job of reading in all the image data and the overall code using go-iforest was pretty streamlined. The overall time to run the program was coming in around 7 seconds. See overall results from program below:  
 ![results](golang_results_v2.png)
 **Comparison of Go vs Python**
 ![correlation](go_python_corr.png)
