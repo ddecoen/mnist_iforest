@@ -13,7 +13,7 @@ The data used for this project was [MNIST](https://en.wikipedia.org/wiki/MNIST_d
 
 ### Analysis and results
 Go did a good job of reading in all the image data and the overall code using go-iforest was pretty streamlined. The overall time to run the program was coming in around 11 seconds. See overall results from program below:  
-![results](golang_results.png)
+![results](golang_results_v2.png)
 **Comparison of Go vs Python**
 ![correlation](go_python_corr.png)
 **Comparison of Go vs R**

@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"math/rand"
 	"os"
+	"path/filepath"
 	"time"
 
 	"github.com/e-XpertSolutions/go-iforest/v2/iforest"
@@ -13,11 +14,25 @@ import (
 )
 
 func main() {
+	// Get the absolute path of the directory
+	executablePath, err := os.Executable()
+	if err != nil {
+		fmt.Println("Error getting executable path:", err)
+		return
+	}
+
+	// calculate the directory containing the executable
+	executableDir := filepath.Dir(executablePath)
+
 	// Set a fixed random seed for reproducibility
 	rand.Seed(999) // You can use any integer value as the seed
 	startTime := time.Now()
+
+	// Construct the absolute path to the data directory
+	dataDir := filepath.Join(executableDir, "../data")
+
 	// Read in the data and set up variables for images and labels
-	train, _, _ := GoMNIST.Load("../data")
+	train, _, _ := GoMNIST.Load(dataDir)
 	images := make([][]float64, len(train.Images))
 	labels := make([]int, len(train.Images))
 
